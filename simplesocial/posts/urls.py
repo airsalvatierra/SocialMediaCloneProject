@@ -9,5 +9,5 @@ urlpatterns = [
     path('new/',views.CratePost.as_view(),name='create'),
     path('by/<username>/',views.UserPost.as_view(),name='for_user'),
     path('by/<username>/<int:pk>/',views.PostDetail.as_view(),name='single'),
-    path('delete/<username>/',views.DeletePost.as_view(),name='delete'),
+    path('delete/<int:pk>/',views.DeletePost.as_view(),name='delete'),
 ]
